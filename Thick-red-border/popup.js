@@ -39,7 +39,7 @@ function grabImages() {
  alert(id);
 */
 // document.getElementByTagName("img").style.border = "thick solid #0000FF";
-// document.getElementById(id).style.border = "thick solid #0000FF";
+// document.getElementById(id).style.border = "thick solid #0000FF" !important;
 // console.log(images);
  
 }
