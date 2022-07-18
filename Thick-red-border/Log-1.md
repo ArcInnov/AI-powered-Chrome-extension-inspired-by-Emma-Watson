@@ -43,3 +43,11 @@ images.style.border = "1px solid blue";
 This did not work
 
 Let us try to add image borde on individual image
+
+Lets first test if the code works and add border for one individual element
+
+Code snippet that adds the required functinality
+    const images=document.querySelectorAll("img"); // used query selector since element id is null
+    let length = images.length; // stores length of arra in variable
+    for (let i = 0; i < length; i++) { // for loop conditions
+       images[i].style.border = "thick solid #FF0000"; // adds border to images & #FF0000 hex code for color red

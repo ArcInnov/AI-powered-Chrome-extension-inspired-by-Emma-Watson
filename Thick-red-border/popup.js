@@ -28,11 +28,19 @@ function execScript(tab) {
 }
 
 function grabImages() {
- const images=document.getElementsByTagName("img");
+ const images=document.querySelectorAll("img");
+ let length = images.length;
+ for (let i = 0; i < length; i++) {
+    images[i].style.border = "thick solid #FF0000";
+  }
+    /*const images=document.getElementsByTagName("img");
  let firstValue = images[0]; // gets first element of array and stores value in variable
- let imageid=
- document.getElementById("myDiv").style.border = "thick solid #0000FF";
- console.log(images);
+ let id = document.getElementsByTagName("img")[0].id;
+ alert(id);
+*/
+// document.getElementByTagName("img").style.border = "thick solid #0000FF";
+// document.getElementById(id).style.border = "thick solid #0000FF";
+// console.log(images);
  
 }
 
