@@ -1,4 +1,5 @@
 const insertBtn = document.getElementById("insertBtn");
+
 insertBtn.addEventListener("click",() => {   
     // Get active browser tab
     chrome.tabs.query({active: true}, function(tabs) {
@@ -33,38 +34,6 @@ function execScript(tab) {
  *  @return Array of image URLs
  */
 function grabImages() {
-    const images = document.querySelectorAll("img");
-    return Array.from(images).map(image=>image.src);    
+ 
 }
 
-/**
- * Executed after all grabImages() calls finished on 
- * remote page
- * Combines results and copy a list of image URLs 
- * to clipboard
- * 
- * @param {[]InjectionResult} frames Array 
- * of grabImage() function execution results
- */
-function onResult(frames) {
-    // If script execution failed on remote end 
-    // and could not return results
-    var arc=333;
-    if (!frames || !frames.length) { 
-        alert("Could not retrieve images from specified page");
-        return;
-    }
-    // Combine arrays of image URLs from 
-    // each frame to a single array
-    const imageUrls = frames.map(frame=>frame.result)
-                            .reduce((r1,r2)=>r1.concat(r2));
-    // Copy to clipboard a string of image URLs, delimited by 
-    // carriage return symbol  
-    window.navigator.clipboard
-          .writeText(imageUrls.join("\n"))
-          .then(()=>{
-             // close the extension popup after data 
-             // is copied to the clipboard
-             window.close();
-          });
-}
