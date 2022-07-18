@@ -1,6 +1,6 @@
 {
-    "name": "Image Grabber", 
-    "description": "Extract all images from current web page",
+    "name": "Image Border", 
+    "description": "Inserts a red border on all images",
     "version": "1.0",
     "manifest_version": 3,
     "icons": {

@@ -1,13 +1,9 @@
 const grabBtn = document.getElementById("grabBtn");
 grabBtn.addEventListener("click",() => {   
-    var arc=111; 
-    alert("Let us first query chrome tabs");
     // Get active browser tab
     chrome.tabs.query({active: true}, function(tabs) {
         var tab = tabs[0];
         if (tab) {
-            var arc=222;
-            alert("About to execute a script on a tab");
             execScript(tab);
         } else {
             alert("There are no active tabs");
@@ -56,7 +52,6 @@ function grabImages() {
 function onResult(frames) {
     // If script execution failed on remote end 
     // and could not return results
-    var arc=333;
     if (!frames || !frames.length) { 
         alert("Could not retrieve images from specified page");
         return;

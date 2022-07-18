@@ -27,13 +27,20 @@ function execScript(tab) {
     )
 }
 
-/**
- * Executed on a remote browser page to grab all images
- * and return their URLs
- * 
- *  @return Array of image URLs
- */
 function grabImages() {
+ const images=document.getElementsByTagName("img");
+ let firstValue = images[0]; // gets first element of array and stores value in variable
+ let imageid=
+ document.getElementById("myDiv").style.border = "thick solid #0000FF";
+ console.log(images);
  
 }
 
+function onResult(frames) {
+    // If script execution failed on remote end 
+    // and could not return results
+    if (!frames || !frames.length) { 
+        alert("Could not retrieve images from specified page");
+        return;
+    }
+}

@@ -15,6 +15,9 @@ need to use border atrribut to get a border
 
 Tried looking up for a readymade solution but that won't work 
 
+Loading both extensions images grabbaer and thick red border
+Image grabber works without hiccups
+
 So back to basics
 Search query - java script code to manipulate html elements
 W3schools - JS HTML DOM - https://www.w3schools.com/js/js_htmldom.asp
@@ -23,3 +26,20 @@ W3schools - JS HTML DOM - https://www.w3schools.com/js/js_htmldom.asp
     I think you will need to change property
 
     Lets try our tests on Emma Watson wikipedia
+
+How to create arrays in Java script and methods to deal with them
+W3schools - JS Arrays - https://www.w3schools.com/js/js_arrays.asp
+Showind array using console log to see if its working as expected
+
+You have managed to print all images by tags on console
+Now lets try and add border to all the images
+You need to add border attribute to all images
+This should work
+element.setAttribute(attribute, value)	Change the attribute value of an HTML element
+I think it will set the border but the color would be a problem you will have to use css to give background color to images
+
+Lets see if this works out
+images.style.border = "1px solid blue";
+This did not work
+
+Let us try to add image borde on individual image
