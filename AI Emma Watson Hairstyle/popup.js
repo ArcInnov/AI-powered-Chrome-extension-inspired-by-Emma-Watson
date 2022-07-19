@@ -22,8 +22,13 @@ function execScript(tab) {
 }
 
 function grabId() {
-    const collection = document.getElementsByClassName("p-nickname vcard-username d-block");
-   alert(collection);
+    let str=window.location.href;
+    let id = str.slice(19);
+    alert("The magic is about to happen "+id);
+    //alert(str);
+    //alert(str.length); // 30-11= 19 split at 19
+    //alert(id);
+
 }
 
 
